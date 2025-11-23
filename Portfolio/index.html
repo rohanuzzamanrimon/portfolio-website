@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rohan | Creative Full Stack Dev</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Lenis (Smooth Scroll) -->
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+
+   
+</head>
+<body class="antialiased selection:bg-[#ccff00] selection:text-black">
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <div class="loader">
+        <h1 class="loader-text text-6xl md:text-9xl font-bold text-[#ccff00] uppercase tracking-tighter">Portfolio</h1>
+    </div>
+
+    <nav class="fixed top-0 left-0 w-full p-6 md:p-10 flex justify-between items-center z-50 mix-blend-difference text-white pointer-events-auto">
+        <div class="logo font-bold text-xl md:text-2xl tracking-widest hoverable" data-cursor="hover">ROHAN</div>
+        <div class="hidden md:flex gap-10 text-sm uppercase tracking-widest font-medium">
+            <a href="#work" class="hover:text-[#ccff00] transition-colors hoverable" data-cursor="hover">Work</a>
+            <a href="#journey" class="hover:text-[#ccff00] transition-colors hoverable" data-cursor="hover">Journey</a>
+            <a href="#contact" class="hover:text-[#ccff00] transition-colors hoverable" data-cursor="hover">Contact</a>
+        </div>
+        <div class="md:hidden text-sm uppercase hoverable" data-cursor="hover">Menu</div>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- Hero -->
+            <section class="min-h-screen flex flex-col justify-center px-6 md:px-20 relative pt-32">
+                <div class="hero-text-container overflow-hidden">
+                    <h1 class="hero-title text-[11vw] leading-[0.85] font-extrabold uppercase text-white tracking-tighter">
+                        <div class="overflow-hidden"><span class="block">Logic</span></div>
+                        <div class="overflow-hidden"><span class="block text-[#555]">Meets</span></div>
+                        <div class="overflow-hidden"><span class="block">Motion</span></div>
+                    </h1>
+                </div>
+                <div class="mt-12 flex justify-between items-end w-full border-t border-gray-800 pt-6">
+                    <div class="max-w-md text-gray-400 text-sm md:text-base hero-sub">
+                        Full Stack Developer <br>
+                        Blending PHP architecture with GSAP interactivity.
+                    </div>
+                    <div class="text-[#ccff00] text-4xl animate-bounce">↓</div>
+                </div>
+            </section>
+
+            <!-- Marquee -->
+            <section class="py-20 w-full overflow-hidden bg-[#ccff00] text-black">
+                <div class="marquee-track flex whitespace-nowrap">
+                    <h2 class="text-3xl md:text-[40px] font-bold uppercase tracking-tighter mr-10">PHP — GSAP — FULL STACK — CREATIVE  </h2>
+                    <h2 class="text-3xl md:text-[40px] font-bold uppercase tracking-tighter mr-10">PHP — GSAP — FULL STACK — CREATIVE  </h2>
+                </div>
+            </section>
+
+            <!-- Horizontal Scroll (Projects) -->
+            <section id="work" class="horizontal-wrapper bg-zinc-900">
+                <div class="horizontal-section">
+                    
+                    <!-- Intro Panel -->
+                    <div class="panel flex items-center justify-center border-r border-zinc-800 relative">
+                        <div class="text-center">
+                            <h2 class="text-[10vw] font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-800">FEATURED<br>PROJECTS</h2>
+                            <p class="text-gray-400 mt-4">(Scroll to Explore)</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 1: Car Rental Service -->
+                    <div class="panel flex flex-col md:flex-row items-center justify-center p-10 gap-10">
+                        <div class="w-full md:w-1/2 h-[50vh] md:h-[70vh] img-container bg-gray-800 hoverable" data-cursor="view">
+                            <!-- Car Image -->
+                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=2670&auto=format&fit=crop" class="w-full h-full object-cover img-parallax opacity-80 hover:opacity-100 transition-opacity duration-500" alt="Car Rental System">
+                        </div>
+                        <div class="w-full md:w-1/3 text-left">
+                            <span class="text-[#ccff00] text-sm font-bold tracking-widest uppercase mb-2 block">01 / Full Stack System</span>
+                            <h3 class="text-4xl md:text-6xl font-bold mb-6">Car Rental<br>Service</h3>
+                            <p class="text-gray-400 leading-relaxed mb-8">
+                                A comprehensive booking platform powered by <strong class="text-white">PHP & MySQL</strong>. Features real-time vehicle availability, secure user authentication, and a sleek frontend.
+                            </p>
+                            <div class="flex gap-4">
+                                <button class="px-8 py-3 border border-white rounded-full hover:bg-white hover:text-black transition-all duration-300 uppercase text-xs font-bold tracking-widest hoverable" data-cursor="hover">View Code</button>
+                                <button class="px-8 py-3 bg-[#ccff00] text-black border border-[#ccff00] rounded-full hover:bg-transparent hover:text-[#ccff00] transition-all duration-300 uppercase text-xs font-bold tracking-widest hoverable" data-cursor="hover">Live Demo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Interactive Vibe (Concept) -->
+                    <div class="panel flex flex-col md:flex-row items-center justify-center p-10 gap-10">
+                        <div class="order-2 md:order-1 w-full md:w-1/3 text-left md:text-right">
+                            <span class="text-[#ccff00] text-sm font-bold tracking-widest uppercase mb-2 block">02 / Creative Concept</span>
+                            <h3 class="text-4xl md:text-6xl font-bold mb-6">Dhaka<br>Commute</h3>
+                            <p class="text-gray-400 leading-relaxed mb-8">
+                                An interactive utility concept visualizing city bus routes. Built using vanilla JS and GSAP for path animation, optimizing local travel data.
+                            </p>
+                            <button class="px-8 py-3 border border-white rounded-full hover:bg-white hover:text-black transition-all duration-300 uppercase text-xs font-bold tracking-widest hoverable" data-cursor="hover">Coming Soon</button>
+                        </div>
+                        <div class="order-1 md:order-2 w-full md:w-1/2 h-[50vh] md:h-[70vh] img-container bg-gray-800 hoverable" data-cursor="view">
+                            <img src="https://images.unsplash.com/photo-1545155711-20d0408d6c70?q=80&w=2670&auto=format&fit=crop" class="w-full h-full object-cover img-parallax opacity-80 hover:opacity-100 transition-opacity duration-500" alt="Concept Project">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Education & Journey Section -->
+            <section id="journey" class="min-h-screen flex items-center justify-center py-32 px-6 relative z-10 bg-[#050505]">
+                <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-20">
+                    
+                    <!-- Left: Text -->
+                    <div class="about-text">
+                        <h2 class="text-5xl md:text-7xl font-bold mb-10 leading-tight">
+                            From <span class="text-[#ccff00]">Grades</span> <br>to Builds.
+                        </h2>
+                        <p class="text-xl text-gray-400 leading-relaxed mb-8 reveal-text">
+                            I don't just write code; I create vibes. While my academic foundation is rock solid, my true passion lies in building systems that work and feel great to use.
+                        </p>
+                        
+                        <div class="mt-12">
+                            <h4 class="text-white font-bold uppercase tracking-widest mb-4">Tech Stack</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-2 border border-gray-700 rounded-full text-sm text-gray-400 hover:border-[#ccff00] hover:text-[#ccff00] transition-colors">PHP / MySQL</span>
+                                <span class="px-4 py-2 border border-gray-700 rounded-full text-sm text-gray-400 hover:border-[#ccff00] hover:text-[#ccff00] transition-colors">Laravel</span>
+                                <span class="px-4 py-2 border border-gray-700 rounded-full text-sm text-gray-400 hover:border-[#ccff00] hover:text-[#ccff00] transition-colors">JavaScript (ES6+)</span>
+                                <span class="px-4 py-2 border border-gray-700 rounded-full text-sm text-gray-400 hover:border-[#ccff00] hover:text-[#ccff00] transition-colors">GSAP</span>
+                                <span class="px-4 py-2 border border-gray-700 rounded-full text-sm text-gray-400 hover:border-[#ccff00] hover:text-[#ccff00] transition-colors">Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Timeline -->
+                    <div class="relative pl-10 timeline-container">
+                        <!-- Vertical Line -->
+                        <div class="timeline-line"></div>
+                        <div class="timeline-progress"></div>
+
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-item relative mb-16 hoverable" data-cursor="hover">
+                            <div class="absolute -left-[45px] top-2 w-4 h-4 rounded-full bg-zinc-800 border border-zinc-600 transition-colors duration-300 timeline-dot"></div>
+                            <span class="text-[#ccff00] text-sm font-bold tracking-widest block mb-1">201X — SSC</span>
+                            <h3 class="text-3xl font-bold text-white mb-2">GPA 5.00 / 5.00</h3>
+                            <p class="text-gray-500 text-sm">The Foundation. Developed a disciplined approach to problem-solving and logic.</p>
+                        </div>
+
+                        <!-- Timeline Item 2 -->
+                        <div class="timeline-item relative mb-16 hoverable" data-cursor="hover">
+                            <div class="absolute -left-[45px] top-2 w-4 h-4 rounded-full bg-zinc-800 border border-zinc-600 transition-colors duration-300 timeline-dot"></div>
+                            <span class="text-[#ccff00] text-sm font-bold tracking-widest block mb-1">201X — HSC</span>
+                            <h3 class="text-3xl font-bold text-white mb-2">GPA 5.00 / 5.00</h3>
+                            <p class="text-gray-500 text-sm">The Consistency. Mastered the fundamentals of science and mathematics.</p>
+                        </div>
+
+                        <!-- Timeline Item 3 -->
+                        <div class="timeline-item relative hoverable" data-cursor="hover">
+                            <div class="absolute -left-[45px] top-2 w-4 h-4 rounded-full bg-zinc-800 border border-zinc-600 transition-colors duration-300 timeline-dot"></div>
+                            <span class="text-[#ccff00] text-sm font-bold tracking-widest block mb-1">202X — UNDERGRAD CSE</span>
+                            <h3 class="text-3xl font-bold text-white mb-2">CGPA 3.16</h3>
+                            <p class="text-gray-500 text-sm">The Build Phase. Shifted focus from theory to practical application. Built full-stack apps, mastered PHP, and discovered the art of creative coding.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 opacity-20 pointer-events-none">
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#ccff00] rounded-full blur-[150px] pulse-glow"></div>
+                </div>
+                <div class="z-10 text-center relative">
+                    <p class="text-[#ccff00] uppercase tracking-widest font-bold mb-6">Ready to Hire?</p>
+                    <h2 class="text-[10vw] font-bold leading-none hoverable" data-cursor="hover">LET'S<br>WORK</h2>
+                    <a href="mailto:your.email@example.com" class="mt-12 inline-block px-12 py-4 bg-white text-black font-bold rounded-full text-xl hover:bg-[#ccff00] transition-all duration-300 hover:scale-110 hoverable" data-cursor="hover">Contact Me</a>
+                </div>
+                <footer class="absolute bottom-10 w-full px-10 flex justify-between text-gray-500 text-sm pointer-events-auto z-20">
+                    <div>© 2024 ROHANUZZAMAN RIMON</div>
+                    <div class="flex gap-4">
+                        <a href="https://www.linkedin.com/in/notsoeas/" class="hover:text-white transition-colors">LinkedIn</a>
+                        <a href="https://github.com/rohanuzzamanrimon" class="hover:text-white transition-colors">GitHub</a>
+                    </div>
+                </footer>
+            </section>
+        </div>
+    </div>
+
+    <script src="animations.js" defer></script>
+    <script src="main.js" defer></script>
+</body>
+</html>

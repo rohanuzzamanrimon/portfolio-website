@@ -1,0 +1,91 @@
+
+        :root {
+            --bg-color: #050505;
+            --text-color: #e0e0e0;
+            --accent-color: #ccff00;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            cursor: none;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Syne', sans-serif;
+        }
+
+        /* Hide Scrollbar */
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+
+        /* Custom Cursor */
+        .cursor-dot, .cursor-outline {
+            position: fixed; top: 0; left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%; pointer-events: none; z-index: 9999;
+        }
+        .cursor-dot { width: 8px; height: 8px; background-color: var(--accent-color); }
+        .cursor-outline {
+            width: 40px; height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+        }
+        body:hover .cursor-outline.hovered {
+            width: 80px; height: 80px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: transparent; backdrop-filter: blur(2px);
+        }
+
+        /* Loader */
+        .loader {
+            position: fixed; inset: 0; background: #000; z-index: 10000;
+            display: flex; justify-content: center; align-items: center; overflow: hidden;
+        }
+        .loader-text span { display: inline-block; transform: translateY(100%); }
+
+        /* Horizontal Section Logic */
+        .horizontal-wrapper {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .horizontal-section {
+            display: flex;
+            width: fit-content; 
+            height: 100%;
+            will-change: transform; 
+        }
+        .panel {
+            width: 100vw; 
+            height: 100%;
+            flex-shrink: 0;
+        }
+
+        /* Parallax Images */
+        .img-container { overflow: hidden; }
+        .img-parallax { transform: scale(1.2); will-change: transform; }
+
+        /* Timeline Styles */
+        .timeline-line {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .timeline-progress {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 0%;
+            background: var(--accent-color);
+        }
+
+        /* Pulse Glow */
+        .pulse-glow {
+            background: var(--accent-color);
+        }
